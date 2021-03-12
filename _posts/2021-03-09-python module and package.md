@@ -13,7 +13,7 @@ python中的 `import xxx` 和 `from xxx import yyy` 中的 `xxx` 一般都是mod
 `package.module`的方式调用package中的module
 
 
-![pythontestdir]({{site.url}}/img/dir.png)
+![pythontestdir]({{site.usr}}/img/dir.png)
 
 有文件结构如上的目录，在pythontest文件夹下有sdk文件夹，里面包含一个自己定义的package(pkg)，pkg模块含有一个module(pkg.py)和另一个package(subpkg)，subpkg有一个module(subpkgmodule)，testimport文件用来测试对各模块的引用，内容如下，testimport-inside.py和testimport-outside.py的内容相同，只是文件位置不同，但是在执行testimport-inside.py的时候会报错，testimport-outside.py的时候不会  
 
