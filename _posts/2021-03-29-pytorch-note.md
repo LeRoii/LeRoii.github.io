@@ -8,7 +8,7 @@ categories: jekyll update
 ## pytorch
 
 ### Tensor
-pytorch中的基本数据结构，类似与数组或矩阵，pytorch中的网络输入，输出以及参数都是存储在Tensor中，与Numpy的ndarrays不同的是Tensor可以运行在GPU和其他硬件加速器上
+pytorch中的基本数据结构，类似于数组或矩阵，pytorch中的网络输入，输出以及参数都是存储在Tensor中，与Numpy的ndarrays不同的是Tensor可以运行在GPU和其他硬件加速器上
 ### Dataset&DataLoaders
 Dataset和DataLoaders提供了操作数据集的接口，Dataset包含了很多常用数据集，可以直接在pytorch中使用
 ### torchvision.transforms
