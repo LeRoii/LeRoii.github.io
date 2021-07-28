@@ -38,3 +38,12 @@ https://developer.nvidia.com/tensorrt
 https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian   
 验证安装   
 ```dpkg -l|grep TensorRT```
+
+### 装cmake
+官网下载源文件后解压，进入文件夹     
+```
+./bootstrap
+make
+sudo make install
+cmake --version
+```
