@@ -5,7 +5,7 @@ date:   2021-07-12 17:41:26 +0800
 categories: jekyll update
 ---
 
-np.array的乘法操作有*,multiply,dot,matmul,其中*和multiply是元素相乘，   
+np.array的乘法操作有 *, multiply, dot, matmul, 其中 * 和 multiply是元素相乘，   
 对于二维矩阵dot和matmul结果相同，都是矩阵乘法，dot会根据参数维度的不同产生不同的结果
 
 ```python
@@ -81,5 +81,5 @@ q: [[1.00000000e+00 0.00000000e+00]
  [1.11022302e-16 1.00000000e+00]]
  ```
 
- ### notice
+### notice
  如果要使用*来做矩阵乘法，需要使用np.matrix而不是np.array
