@@ -47,3 +47,7 @@ make
 sudo make install  
 cmake --version
 ```
+
+### OpenCV
+```
+sudo cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local  -D OPENCV_GENERATE_PKGCONFIG=ON -DOPENCV_EXTRA_MODULES_PATH=/modules ..
