@@ -34,6 +34,9 @@ https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html
 ### 装tensorrt
 搜tensorrt，目前官方好像只提供了最新版本的tensorrt，archived页面没找到   
 https://developer.nvidia.com/tensorrt   
+
+下载地址，有之前的版本  
+https://developer.nvidia.com/nvidia-tensorrt-download
 安装说明   
 https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian   
 验证安装   
