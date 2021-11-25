@@ -35,3 +35,4 @@ https://github.com/ceccocats/tkDNN/blob/master/tests/darknet/yolo4.cpp
 使用.rt文件进行推理可以参考  
 https://github.com/ceccocats/tkDNN/blob/master/demo/demo/demo.cpp  
  
+ libtkdnn.so依赖于libkernel.so，如果找不到libkernel.so，会产生undefined reference的错误
