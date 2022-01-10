@@ -22,3 +22,12 @@ kernel函数是thread执行的程序，形式如`Kernel<<<Dg,Db, Ns, S>>>(param 
 `S`:可选参数，用于设置核函数运行在哪个流中，类型是`cudaStream_t`，初始为0    
 
 https://developer.nvidia.com/blog/cuda-dynamic-parallelism-api-principles/
+
+### built-in Variables
+`threadIdx`是一个uint3类型，表示一个线程的索引。   
+
+`blockIdx`是一个uint3类型，表示一个线程块的索引，一个线程块中通常有多个线程。  
+
+`blockDim`是一个dim3类型，表示线程块的大小。   
+
+`gridDim`是一个dim3类型，表示网格的大小，一个网格中通常有多个线程块。  
