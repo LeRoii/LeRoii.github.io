@@ -8,7 +8,7 @@ categories: jekyll update
 ## step 1
 下载`mingw`，`cmake`，`opencv`源码   
 ### mingw下载地址    
-https://sourceforge.net/projects/mingw-w64/files/mingw-w64/
+[https://sourceforge.net/projects/mingw-w64/files/mingw-w64/](https://sourceforge.net/projects/mingw-w64/files/mingw-w64/)
 
 根据需要选不同的版本，32位选i686，64位选x86_64，其他随意   
 下下来解压到一个文件夹即可，将bin文件添加到环境变量   
@@ -16,7 +16,7 @@ https://sourceforge.net/projects/mingw-w64/files/mingw-w64/
 `cmd`中输`gcc -v`，没有出错即安装完成   
 
 ### cmake下载地址   
-https://cmake.org/files/v3.17/
+[https://cmake.org/files/v3.17/](https://cmake.org/files/v3.17/)
 
 后缀`.zip`的下下来没有gui，解压后可以直接用，   
 后缀`.msi`需要安装，有gui   
@@ -25,10 +25,9 @@ https://cmake.org/files/v3.17/
 
 ## step 2
 ### 编译`opencv`   
-https://blog.csdn.net/NeoZng/article/details/122778711
+[https://blog.csdn.net/NeoZng/article/details/122778711](https://blog.csdn.net/NeoZng/article/details/122778711)
 
-跟着这个操作即可完成
-
+跟着这个操作即可完成   
 ## step 3
 ### 配置`vscode`环境    
 需要安装的插件： 
