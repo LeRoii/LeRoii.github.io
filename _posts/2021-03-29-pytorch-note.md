@@ -26,3 +26,7 @@ for classification
 
 ### nn.CrossEntropyLoss
 combine nn.LogSoftmax and nn.LLLoss
+
+## unsqueeze() & squeeze()
+`unsqueeze()`函数起升维的作用,参数表示在哪个地方加一个维度   
+`squeeze()`降维

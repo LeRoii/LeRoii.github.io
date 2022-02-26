@@ -18,9 +18,14 @@ categories: jekyll update
 
 ### 装cuda
 搜索cuda即可找到nvidia cuda官方页面，里面有关于下载和安装的说明，一般会提供最新版本的连接，如果不想装最新版本，
-在这里https://developer.nvidia.com/cuda-toolkit-archive    
-找以前的版本，cuda安装说明https://docs.nvidia.com/cuda/index.html#installation-guides    
-`nvcc -V`如果出现cuda版本号则安装完成
+在这里https://developer.nvidia.com/cuda-toolkit-archive
+
+找以前的版本，cuda安装说明https://docs.nvidia.com/cuda/index.html#installation-guides
+
+`nvcc -V`如果出现cuda版本号则安装完成    
+这里会默认安装cuda和显卡驱动，可能会产生问题，最好选择只安装cuda toolkit，参考
+https://zhuanlan.zhihu.com/p/143429249
+
 
 ### 装cudnn
 同样搜索cudnn，选择对应版本，下载三个.deb文件，然后`sudo dpkg -i`   
