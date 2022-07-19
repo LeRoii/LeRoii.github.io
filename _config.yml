@@ -29,6 +29,8 @@ url: "https://github.com/LeRoii/LeRoii.github.io" # the base hostname & protocol
 twitter_username: jekyllrb
 github_username:  jekyll
 
+mermaid_enable: true
+
 # Build settings
 theme: minima
 plugins:
