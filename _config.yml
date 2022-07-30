@@ -31,6 +31,11 @@ github_username:  jekyll
 
 mermaid_enable: true
 
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+ 
+
 # Build settings
 theme: minima
 plugins:
