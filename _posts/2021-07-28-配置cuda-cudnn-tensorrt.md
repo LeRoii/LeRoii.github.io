@@ -47,6 +47,16 @@ https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installin
 验证安装   
 `dpkg -l|grep TensorRT`  
 
+过短时间会出现nvidia-smi命令出错的情况如下，这是因为内核版本更新的问题，导致新版本内核和原来显卡驱动不匹配，参考[这里](https://blog.csdn.net/xiaojinger_123/article/details/121161446)
+```
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+```
+首先通过`ll /usr/src`查看使用的显卡驱动版本，然后执行
+```
+sudo dkms install -m nvidia -v 470.82.00
+```
+
+
 ### 装cmake
 官网下载源文件后解压，进入文件夹
 ```
