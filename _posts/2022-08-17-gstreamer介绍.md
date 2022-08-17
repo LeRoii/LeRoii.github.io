@@ -27,4 +27,4 @@ gstreamer的核心思想是通过各种元素(elements)和插件构造媒体管�
 ### tips
 - 可以通过`gst-inspect-1.0`查看插件的各种属性
 - `video/x-raw`是cpu内存，`video/x-raw(memory:NVMM)`是gpu内存
-- 元素之间通过!连接，两个相邻元素的输入输出必须对应
+- 元素之间通过!连接，两个相邻元素的输入输出Pad必须对应，即前一个元素的输出是`video/x-raw`，后一个元素的输入也必须是`video/x-raw`，不能是`video/x-raw(memory:NVMM)`
