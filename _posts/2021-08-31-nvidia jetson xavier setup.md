@@ -14,22 +14,22 @@ sudo apt-get install qt5-default qtcreator -y
 ```
 
 ## 关闭gnome
-### 进入命令行
+- 进入命令行
 ```
 sudo init 3
 ```
 
-### 进入图像界面
+- 进入图像界面
 ```
 sudo init 5
 ```
 
-### 关掉图像界面
+- 关掉图像界面
 ```
 sudo systemctl set-default multi-user.target
 ```
 
-### 打开图像界面
+- 打开图像界面
 ```
 sudo systemctl set-default graphical.target
 ```
