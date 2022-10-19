@@ -35,6 +35,19 @@ cudnn安装说明
 https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html   
 `find /usr -name cudnn.h`如果能找到头文件则安装成功    
 `dpkg -l|grep cudnn`也可以用于验证是否安装了cudnn
+
+#### 通过cp安装cudnn
+可以从官网下载.tar.xz压缩包，解压后进入目录，输入
+```
+# 复制cudnn头文件
+sudo cp include/* /usr/local/cuda-10.0/include/
+# 复制cudnn的库
+sudo cp lib64/* /usr/local/cuda-10.0/lib64/
+# 添加可执行权限
+sudo chmod +x /usr/local/cuda-10.0/include/cudnn.h
+sudo chmod +x /usr/local/cuda-10.0/lib64/libcudnn*
+```
+
 #### 查看cudnn版本
 ```
 cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
