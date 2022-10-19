@@ -35,6 +35,10 @@ cudnn安装说明
 https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html   
 `find /usr -name cudnn.h`如果能找到头文件则安装成功    
 `dpkg -l|grep cudnn`也可以用于验证是否安装了cudnn
+#### 查看cudnn版本
+```
+cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+```
 
 ### 装tensorrt
 搜tensorrt，目前官方好像只提供了最新版本的tensorrt，archived页面没找到   
