@@ -33,3 +33,9 @@ sudo systemctl set-default multi-user.target
 ```
 sudo systemctl set-default graphical.target
 ```
+
+## 查看jetpack版本
+```
+cat /etc/nv_tegra_release
+sudo apt-cache show nvidia-jetpack
+```
