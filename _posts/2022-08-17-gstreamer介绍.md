@@ -46,7 +46,9 @@ Cap(capabilities)指定了element的各种属性，一般用单引号或双引�
 ```
 gst-launch-1.0 videotestsrc ! video/x-raw, width=1920, height=1080 ! autovideosink
 ```
-其中`videotestsrc`和`autovideosink`都属于*element*，autovideosink is a video sink that automatically detects an appropriate video sink to use. It does so by scanning the registry for all elements that have "Sink" and "Video" in the class field of their element information, and also have a non-zero autoplugging rank.
+其中`videotestsrc`和`autovideosink`都属于*element*，  
+通常“sink”插件可以将获取的视频流输出到显示器  
+autovideosink is a video sink that automatically detects an appropriate video sink to use. It does so by scanning the registry for all elements that have "Sink" and "Video" in the class field of their element information, and also have a non-zero autoplugging rank.
 - videotest存成jpg图像
 ```
 gst-launch-1.0 videotestsrc num-buffers=1 ! video/x-raw, width=1920, height=1080 ! jpegenc ! filesink location=img.jpg
