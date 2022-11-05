@@ -54,7 +54,16 @@ autovideosink is a video sink that automatically detects an appropriate video si
 gst-launch-1.0 videotestsrc num-buffers=1 ! video/x-raw, width=1920, height=1080 ! jpegenc ! filesink location=img.jpg
 ```
 
+- videotest存成视频
+```
+gst-launch-1.0 videotestsrc num-buffers=200 ! 'video/x-raw, width=(int)1280, height=(int)720, format=(string)I420' ! omxh264enc ! qtmux ! filesink location=test.mp4 -e
+```
+
 - h264解码
 ```
 gst-launch-1.0 filesrc location=./test.mp4 ! qtdemux ! queue ! h264parse ! nvv4l2decoder ! nv3dsink -e
 ```
+`qtdemux`指的是`QuickTime demuxer`，  
+`mux`指的是将视频文件，音频文件和字幕文件合并为某一个视频格式，比如mp4或mkv  
+`demux`是`mux`的逆过程，就是从合成的多媒体文件中分解视频，音频和字幕  
+`queue`用于多线程，在source pad上创建新线程，解耦sink和source pad上的处理
