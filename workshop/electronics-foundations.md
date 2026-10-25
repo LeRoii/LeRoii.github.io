@@ -6,7 +6,7 @@ section: workshop
 description: 面向电子设计竞赛入门的安全、焊接、万用表和直流电源基础讲义
 ---
 
-# 电子设计基础训练自学讲义（第1-3章）
+# 电子设计基础训练自学讲义<span class="nowrap">（第1-3章）</span>
 
 ## 讲义用途
 
