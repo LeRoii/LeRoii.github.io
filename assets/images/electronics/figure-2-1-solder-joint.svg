@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="640" height="230" preserveAspectRatio="xMinYMin meet" viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="640" height="230"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-230)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="18" y="18" width="604" height="194" rx="12" ry="12" style="stroke: rgb(85%,91%,96%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="95" y="72" width="450" height="32" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(30%,60%,38%); fill-rule: evenodd;"/>
+			<text x="560" y="82" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,164) scale(1,-1)">PCB</text>
+			<rect x="270" y="55" width="100" height="66" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(85%,71%,36%); fill-rule: evenodd;"/>
+			<text x="390" y="60" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,120) scale(1,-1)">焊盘</text>
+			<rect x="310" y="92" width="20" height="90" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(72%,75%,78%); fill-rule: evenodd;"/>
+			<text x="340" y="168" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,336) scale(1,-1)">引脚</text>
+			<path d="M 250 104 C 263 145 292 151 310 148 L 310 104 Z " style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 2; fill: rgb(83%,86%,88%); fill-rule: evenodd;"/>
+			<path d="M 330 104 L 330 148 C 349 151 378 145 390 104 Z " style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 2; fill: rgb(83%,86%,88%); fill-rule: evenodd;"/>
+			<text x="130.0" y="142" style="font-family: CN; font-size: 11px;fill: rgb(18%,45%,70%); stroke:none;" transform="translate(0,284) scale(1,-1)">焊料形成连续凹形圆角</text>
+			<path d="M 230,136 L 267,125 Z" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="267 125, 261.0867 130.3882, 259.1035 123.7174" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,45%,70%); fill-rule: evenodd;"/>
+			<text x="205.0" y="34" style="font-family: CN; font-size: 10px;fill: rgb(37%,41%,46%); stroke:none;" transform="translate(0,68) scale(1,-1)">良好焊点应同时浸润引脚和焊盘，表面连续且无桥连</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="640" height="230" preserveAspectRatio="xMinYMin meet" viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="640" height="230"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-230)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="18" y="18" width="604" height="194" rx="12" ry="12" style="stroke: rgb(85%,91%,96%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="55" y="72" width="92" height="86" rx="5" ry="5" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2; fill: rgb(85%,91%,96%); fill-rule: evenodd;"/>
+			<text x="79.0" y="121" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,242) scale(1,-1)">直流电源</text>
+			<text x="91.964" y="99" style="font-family: CN; font-size: 12px;fill: rgb(18%,45%,70%); stroke:none;" transform="translate(0,198) scale(1,-1)">5 V</text>
+			<path d="M 147,145 L 545,145 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 147,75 L 545,75 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="160.364" y="153" style="font-family: CN; font-size: 12px;fill: rgb(78%,29%,29%); stroke:none;" transform="translate(0,306) scale(1,-1)">+</text>
+			<text x="162.008" y="56" style="font-family: CN; font-size: 12px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,112) scale(1,-1)">-</text>
+			<path d="M 490,145 L 490,132 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="452" y="88" width="76" height="44" rx="4" ry="4" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 490,88 L 490,75 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="478.0" y="103" style="font-family: CN; font-size: 12px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,206) scale(1,-1)">负载</text>
+			<path d="M 330,145 L 330,133 Z" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="330" cy="110" r="23" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 330,87 L 330,75 Z" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="324.735" y="103" style="font-family: CN; font-size: 15px;fill: rgb(18%,45%,70%); stroke:none;" transform="translate(0,206) scale(1,-1)">V</text>
+			<text x="361" y="116" style="font-family: CN; font-size: 10px;fill: rgb(18%,45%,70%); stroke:none;" transform="translate(0,232) scale(1,-1)">并联</text>
+			<text x="252.424" y="45" style="font-family: CN; font-size: 11px;fill: rgb(37%,41%,46%); stroke:none;" transform="translate(0,90) scale(1,-1)">电压表跨接在两个节点之间 - 并联测量</text>
+		</g>
+	</g>
+</svg>

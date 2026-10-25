@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="640" height="190" preserveAspectRatio="xMinYMin meet" viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="640" height="190"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-190)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="18" y="18" width="604" height="154" rx="12" ry="12" style="stroke: rgb(85%,91%,96%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<circle cx="76" cy="96" r="5" style="stroke: rgb(78%,29%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(78%,29%,29%); fill-rule: evenodd;"/>
+			<text x="63.328" y="124" style="font-family: CN; font-size: 12px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,248) scale(1,-1)">+5 V</text>
+			<path d="M 81,96 L 145,96 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 145,96 L 160,96 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="160" y="84" width="115" height="24" rx="3" ry="3" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 275,96 L 290,96 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="201.984" y="124" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,248) scale(1,-1)">330 Ω</text>
+			<path d="M 290,96 L 345,96 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="390" cy="96" r="30" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="379.548" y="91" style="font-family: CN; font-size: 12px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,182) scale(1,-1)">LED</text>
+			<path d="M 405,120 L 432,142 Z" style="stroke: rgb(30%,54%,35%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="432 142, 424.2175 140.1473, 428.6136 134.7521" style="stroke: rgb(30%,54%,35%); stroke-linecap: butt; stroke-width: 1; fill: rgb(30%,54%,35%); fill-rule: evenodd;"/>
+			<path d="M 414,109 L 444,128 Z" style="stroke: rgb(30%,54%,35%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="444 128, 436.0524 127.0854, 439.7761 121.206" style="stroke: rgb(30%,54%,35%); stroke-linecap: butt; stroke-width: 1; fill: rgb(30%,54%,35%); fill-rule: evenodd;"/>
+			<path d="M 420,96 L 540,96 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="545" cy="96" r="5" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,21%,36%); fill-rule: evenodd;"/>
+			<text x="530.864" y="60" style="font-family: CN; font-size: 12px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,120) scale(1,-1)">GND</text>
+			<path d="M 525,49 L 565,49 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 532,42 L 558,42 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 539,35 L 551,35 Z" style="stroke: rgb(9%,21%,36%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="207.57999999999998" y="28" style="font-family: CN; font-size: 10px;fill: rgb(37%,41%,46%); stroke:none;" transform="translate(0,56) scale(1,-1)">限流电阻控制LED电流，方向错误时LED通常不导通</text>
+		</g>
+	</g>
+</svg>

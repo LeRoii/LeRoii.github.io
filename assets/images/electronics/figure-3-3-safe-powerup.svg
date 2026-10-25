@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="640" height="520" preserveAspectRatio="xMinYMin meet" viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="640" height="520"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-520)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="18" y="18" width="604" height="484" rx="12" ry="12" style="stroke: rgb(85%,91%,96%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="135" y="435" width="370" height="46" rx="8" ry="8" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.8; fill: rgb(85%,91%,96%); fill-rule: evenodd;"/>
+			<text x="287.0" y="452" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,904) scale(1,-1)">关闭电源输出</text>
+			<rect x="135" y="355" width="370" height="46" rx="8" ry="8" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="243.0" y="372" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,744) scale(1,-1)">设定目标电压和较小的初始限流</text>
+			<rect x="135" y="275" width="370" height="46" rx="8" ry="8" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="215.5" y="292" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,584) scale(1,-1)">检查极性、器件方向、对地电阻和板上异物</text>
+			<rect x="135" y="195" width="370" height="46" rx="8" ry="8" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="226.5" y="212" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,424) scale(1,-1)">连接电源线，双手离开电路和旋转机构</text>
+			<rect x="135" y="115" width="370" height="46" rx="8" ry="8" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="206.82100000000003" y="132" style="font-family: CN; font-size: 11px;fill: rgb(9%,21%,36%); stroke:none;" transform="translate(0,264) scale(1,-1)">开启输出，立即观察CV/CC、电流和异常现象</text>
+			<path d="M 320,435 L 320,401 Z" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<polygon points="320 401, 323.4797 408.2036, 316.5203 408.2036" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,45%,70%); fill-rule: evenodd;"/>
+			<path d="M 320,355 L 320,321 Z" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<polygon points="320 321, 323.4797 328.2036, 316.5203 328.2036" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,45%,70%); fill-rule: evenodd;"/>
+			<path d="M 320,275 L 320,241 Z" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<polygon points="320 241, 323.4797 248.2036, 316.5203 248.2036" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,45%,70%); fill-rule: evenodd;"/>
+			<path d="M 320,195 L 320,161 Z" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<polygon points="320 161, 323.4797 168.2036, 316.5203 168.2036" style="stroke: rgb(18%,45%,70%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,45%,70%); fill-rule: evenodd;"/>
+			<path d="M 505,138 L 570,138 Z" style="stroke: rgb(30%,54%,35%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<polygon points="570 138, 562.7964 141.4797, 562.7964 134.5203" style="stroke: rgb(30%,54%,35%); stroke-linecap: butt; stroke-width: 1; fill: rgb(30%,54%,35%); fill-rule: evenodd;"/>
+			<text x="575" y="150" style="font-family: CN; font-size: 10px;fill: rgb(30%,54%,35%); stroke:none;" transform="translate(0,300) scale(1,-1)">正常</text>
+			<text x="575" y="130" style="font-family: CN; font-size: 10px;fill: rgb(30%,54%,35%); stroke:none;" transform="translate(0,260) scale(1,-1)">逐级测量</text>
+			<path d="M 135,115 L 70,115 Z" style="stroke: rgb(78%,29%,29%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<polygon points="70 115, 77.20358 111.5203, 77.20358 118.4797" style="stroke: rgb(78%,29%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(78%,29%,29%); fill-rule: evenodd;"/>
+			<text x="45.0" y="127" style="font-family: CN; font-size: 10px;fill: rgb(78%,29%,29%); stroke:none;" transform="translate(0,254) scale(1,-1)">异常</text>
+			<text x="25.0" y="107" style="font-family: CN; font-size: 10px;fill: rgb(78%,29%,29%); stroke:none;" transform="translate(0,214) scale(1,-1)">立即断电</text>
+			<text x="220.0" y="38" style="font-family: CN; font-size: 10px;fill: rgb(37%,41%,46%); stroke:none;" transform="translate(0,76) scale(1,-1)">新电路首次上电必须先限流、再观察、后测量</text>
+		</g>
+	</g>
+</svg>
