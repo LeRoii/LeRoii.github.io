@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<section class="home-hero" aria-labelledby="workshop-title">
+  <div class="eyebrow-row">
+    <span>FEATURED</span>
+    <span class="eyebrow-rule" aria-hidden="true"></span>
+    <span>Last updated&nbsp;&nbsp;2026-10-26</span>
+  </div>
+
+  <h1 id="workshop-title">电子创新工作室资料<span aria-hidden="true">·</span></h1>
+  <p class="home-lead">这里整理了电子创新工作室的基础资料、实验笔记和实用工具，适合初学者按步骤自学，也方便日后查阅与参考。</p>
+
+  <div class="featured-resource">
+    <div class="featured-resource__copy">
+      <div class="section-label"><span aria-hidden="true"></span>当前推荐</div>
+      <h2>电子设计基础训练自学讲义（第1-3章）</h2>
+      <p>面向电子设计竞赛入门的基础训练讲义，涵盖实验安全、基础工具使用和常见电路调试方法。内容结合实际经验，注重可操作性，适合在实验室或工作室环境下自学。</p>
+      <div class="resource-actions">
+        <a class="button-primary" href="{{ '/workshop/electronics-foundations/' | relative_url }}">阅读讲义 <span aria-hidden="true">→</span></a>
+        <span class="resource-meta">Markdown&nbsp;&nbsp;·&nbsp;&nbsp;共 3 章&nbsp;&nbsp;·&nbsp;&nbsp;持续更新</span>
+      </div>
+    </div>
+    <img class="featured-resource__diagram" src="{{ '/assets/images/electronics/figure-1-1-led-circuit.svg' | relative_url }}" alt="LED限流电路示意图">
+  </div>
+
+  <nav class="chapter-index" aria-label="讲义章节目录">
+    <div class="chapter-index__title"><span aria-hidden="true"></span>章节目录</div>
+    <a href="{{ '/workshop/electronics-foundations/#第1章-安全和基线测试' | relative_url }}">
+      <strong>01</strong><span><b>安全和基线测试</b><small>实验室安全规范、常用工具介绍与基础测试方法。</small></span><i aria-hidden="true">→</i>
+    </a>
+    <a href="{{ '/workshop/electronics-foundations/#第2章-焊接和返修' | relative_url }}">
+      <strong>02</strong><span><b>焊接和返修</b><small>焊接工具使用、焊接技巧、常见问题与返修方法。</small></span><i aria-hidden="true">→</i>
+    </a>
+    <a href="{{ '/workshop/electronics-foundations/#第3章-万用表和直流电源' | relative_url }}">
+      <strong>03</strong><span><b>万用表和直流电源</b><small>万用表的使用方法、直流电源设置与常见测量实践。</small></span><i aria-hidden="true">→</i>
+    </a>
+  </nav>
+
+  {{ content }}
+</section>
+

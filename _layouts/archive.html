@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="archive-page">
+  <div class="eyebrow-row">
+    <span>ARCHIVE</span>
+    <span class="eyebrow-rule" aria-hidden="true"></span>
+  </div>
+  <h1>{{ page.title }}</h1>
+  <p class="archive-page__lead">记录学习过程中的技术笔记、配置经验和项目思考。</p>
+  <div class="archive-list">
+    {% for post in site.posts %}
+      <article>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span aria-hidden="true">→</span>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+

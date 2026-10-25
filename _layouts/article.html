@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="article-shell">
+  <div class="article-kicker">
+    {% if page.section == 'workshop' %}
+      <a href="{{ '/workshop/' | relative_url }}">电子创新工作室资料</a>
+    {% elsif page.section == 'about' %}
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    {% else %}
+      <a href="{{ '/archive/' | relative_url }}">过往资料</a>
+    {% endif %}
+    <span aria-hidden="true">/</span>
+    <span>{{ page.title }}</span>
+  </div>
+  <div class="article-body">
+    {{ content }}
+  </div>
+</article>
+
