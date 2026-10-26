@@ -6,7 +6,7 @@
     </a>
     <nav class="site-nav" aria-label="主导航">
       <a{% if page.section == 'workshop' %} class="is-active" aria-current="page"{% endif %} href="{{ '/workshop/' | relative_url }}">电子创新工作室资料</a>
-      <a{% if page.section == 'archive' %} class="is-active" aria-current="page"{% endif %} href="{{ '/archive/' | relative_url }}">过往资料</a>
+      <a{% if page.section == 'archive' or page.layout == 'post' %} class="is-active" aria-current="page"{% endif %} href="{{ '/archive/' | relative_url }}">过往资料</a>
       <a{% if page.section == 'about' %} class="is-active" aria-current="page"{% endif %} href="{{ '/about/' | relative_url }}">关于</a>
     </nav>
   </div>

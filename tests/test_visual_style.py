@@ -17,6 +17,13 @@ class VisualStyleTests(unittest.TestCase):
         self.assertIn("layout: article", post)
         self.assertIn("{{ content }}", post)
 
+    def test_legacy_posts_activate_archive_navigation(self):
+        header = (ROOT / "_includes/site-header.html").read_text(encoding="utf-8")
+        self.assertRegex(
+            header,
+            r"page\.section\s*==\s*'archive'.*page\.layout\s*==\s*'post'",
+        )
+
     def test_home_has_selected_information_hierarchy(self):
         home = (ROOT / "_layouts/home.html").read_text(encoding="utf-8")
         for phrase in [
