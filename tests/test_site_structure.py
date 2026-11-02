@@ -19,6 +19,7 @@ class SiteStructureTests(unittest.TestCase):
         header = (ROOT / "_includes/site-header.html").read_text(encoding="utf-8")
         for label, href in [
             ("电子创新工作室资料", "/workshop/"),
+            ("任务分配", "/tasks/"),
             ("过往资料", "/archive/"),
             ("关于", "/about/"),
         ]:
@@ -30,6 +31,8 @@ class SiteStructureTests(unittest.TestCase):
             "index.markdown": "/",
             "archive.md": "/archive/",
             "about.markdown": "/about/",
+            "tasks/index.md": "/tasks/",
+            "tasks/ubuntu-opencv-week1.md": "/tasks/ubuntu-opencv-week1/",
         }
         for filename, permalink in pages.items():
             text = (ROOT / filename).read_text(encoding="utf-8")

@@ -6,6 +6,8 @@ layout: default
   <div class="article-kicker">
     {% if page.section == 'workshop' %}
       <a href="{{ '/workshop/' | relative_url }}">电子创新工作室资料</a>
+    {% elsif page.section == 'tasks' %}
+      <a href="{{ '/tasks/' | relative_url }}">任务分配</a>
     {% elsif page.section == 'about' %}
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     {% else %}

@@ -23,6 +23,8 @@ required_files = [
     "about.markdown",
     "workshop/index.md",
     "workshop/electronics-foundations.md",
+    "tasks/index.md",
+    "tasks/ubuntu-opencv-week1.md",
     "_layouts/default.html",
     "_layouts/home.html",
     "_layouts/archive.html",
@@ -41,6 +43,8 @@ routes = {
     "about.markdown": "/about/",
     "workshop/index.md": "/workshop/",
     "workshop/electronics-foundations.md": "/workshop/electronics-foundations/",
+    "tasks/index.md": "/tasks/",
+    "tasks/ubuntu-opencv-week1.md": "/tasks/ubuntu-opencv-week1/",
 }
 for filename, route in routes.items():
     path = ROOT / filename
@@ -83,11 +87,22 @@ if header.is_file():
     header_text = header.read_text(encoding="utf-8")
     for label, route in [
         ("电子创新工作室资料", "/workshop/"),
+        ("任务分配", "/tasks/"),
         ("过往资料", "/archive/"),
         ("关于", "/about/"),
     ]:
         if label not in header_text or route not in header_text:
             errors.append(f"navigation entry missing: {label} -> {route}")
+
+task_page = require_file("tasks/ubuntu-opencv-week1.md")
+if task_page.is_file():
+    task_text = task_page.read_text(encoding="utf-8")
+    for removed in ["教师确认栏", "教师签字", "安装前教师确认表"]:
+        if removed in task_text:
+            errors.append(f"task page still contains removed content: {removed}")
+    for retained in ["安全红线", "备份", "目标硬盘", "SHA-256", "OpenCV 工程重建"]:
+        if retained not in task_text:
+            errors.append(f"task page missing required content: {retained}")
 
 css = require_file("assets/css/style.scss")
 if css.is_file():
