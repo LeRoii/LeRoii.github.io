@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs><style>.title{font:700 32px Arial,"Noto Sans SC",sans-serif;fill:#102a43}.h{font:700 23px Arial,"Noto Sans SC",sans-serif;fill:#102a43}.t{font:18px Arial,"Noto Sans SC",sans-serif;fill:#334e68}.small{font:16px Arial,"Noto Sans SC",sans-serif;fill:#486581}.box{fill:#fff;stroke:#829ab1;stroke-width:3}.mcu{fill:#e8f3ff;stroke:#1473e6;stroke-width:3}.wire{fill:none;stroke:#1473e6;stroke-width:6}.gnd{fill:none;stroke:#243b53;stroke-width:5}.hot{fill:none;stroke:#f59e0b;stroke-width:6}</style></defs>
+  <rect width="1200" height="700" fill="#f5f9fc"/><text x="55" y="62" class="title">GPIO 两个基本场景：输出驱动与输入读取</text>
+  <rect x="55" y="105" width="525" height="470" rx="22" class="box"/><text x="90" y="150" class="h">输出：GPIO → 限流电阻 → LED</text>
+  <rect x="100" y="245" width="150" height="100" rx="15" class="mcu"/><text x="135" y="290" class="h">MCU</text><text x="118" y="322" class="small">GPIO_OUT</text>
+  <path d="M250 295 H330" class="wire"/><rect x="330" y="270" width="100" height="50" rx="8" fill="#fff4e5" stroke="#f59e0b" stroke-width="3"/><text x="350" y="302" class="t">R 限流</text>
+  <path d="M430 295 H485" class="wire"/><polygon points="485,260 485,330 535,295" fill="#f59e0b"/><path d="M535 260 V330" class="hot"/><path d="M535 295 V410" class="gnd"/><path d="M510 410 H560 M520 427 H550 M532 444 H538" class="gnd"/>
+  <text x="100" y="495" class="t">输出高/低电平由程序控制；先核对端口允许电流。</text><text x="100" y="530" class="t">大电流负载应加三极管或 MOSFET 驱动。</text>
+  <rect x="620" y="105" width="525" height="470" rx="22" class="box"/><text x="655" y="150" class="h">输入：上拉按键（按下为 0）</text>
+  <text x="735" y="215" class="t">3.3 V</text><path d="M780 225 V260" class="hot"/><rect x="755" y="260" width="50" height="105" rx="7" fill="#fff4e5" stroke="#f59e0b" stroke-width="3"/><text x="822" y="320" class="t">上拉电阻</text>
+  <circle cx="780" cy="405" r="10" fill="#1473e6"/><path d="M780 365 V405 H900" class="wire"/><rect x="900" y="355" width="170" height="100" rx="15" class="mcu"/><text x="935" y="397" class="h">MCU</text><text x="920" y="430" class="small">GPIO_IN</text>
+  <path d="M780 405 V455 M745 470 L815 440 M780 470 V510" class="gnd"/><path d="M755 510 H805 M765 527 H795 M777 544 H783" class="gnd"/>
+  <text x="655" y="495" class="t">松开：1　按下：0　输入端不能悬空。</text><text x="655" y="530" class="t">机械按键会抖动，需要软/硬件消抖。</text>
+  <rect x="115" y="610" width="970" height="58" rx="12" fill="#fff4e5" stroke="#f59e0b" stroke-width="2"/><text x="150" y="647" class="t">3.3 V、5 V 是否兼容，以及引脚的灌/拉电流能力，都必须查数据手册。</text>
+</svg>

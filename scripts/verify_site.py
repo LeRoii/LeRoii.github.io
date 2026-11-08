@@ -23,6 +23,7 @@ required_files = [
     "about.markdown",
     "workshop/index.md",
     "workshop/electronics-foundations.md",
+    "workshop/common-interface-foundations.md",
     "tasks/index.md",
     "tasks/ubuntu-opencv-week1.md",
     "_layouts/default.html",
@@ -43,6 +44,7 @@ routes = {
     "about.markdown": "/about/",
     "workshop/index.md": "/workshop/",
     "workshop/electronics-foundations.md": "/workshop/electronics-foundations/",
+    "workshop/common-interface-foundations.md": "/workshop/common-interface-foundations/",
     "tasks/index.md": "/tasks/",
     "tasks/ubuntu-opencv-week1.md": "/tasks/ubuntu-opencv-week1/",
 }
@@ -81,6 +83,27 @@ if lecture.is_file():
             ET.parse(path)
         except ET.ParseError as exc:
             errors.append(f"invalid SVG XML {reference}: {exc}")
+
+chapter4 = require_file("workshop/common-interface-foundations.md")
+if chapter4.is_file():
+    chapter4_text = chapter4.read_text(encoding="utf-8")
+    if chapter4_text.count("# 第4章 共同接口基础") != 1:
+        errors.append("Chapter 4 heading count is not 1")
+    for phrase in ["示波器", "单片机最小系统", "GPIO", "UART", "统一接口表", "基线测试", "分组表"]:
+        if phrase not in chapter4_text:
+            errors.append(f"Chapter 4 missing content: {phrase}")
+    svg_refs = re.findall(r"\((/assets/images/electronics/figure-4-[^)]+\.svg)\)", chapter4_text)
+    if len(svg_refs) != 4 or len(set(svg_refs)) != 4:
+        errors.append(f"expected 4 unique Chapter 4 SVG references, got {len(set(svg_refs))}")
+    for reference in svg_refs:
+        path = ROOT / reference.lstrip("/")
+        if not path.is_file():
+            errors.append(f"missing Chapter 4 SVG reference target: {reference}")
+            continue
+        try:
+            ET.parse(path)
+        except ET.ParseError as exc:
+            errors.append(f"invalid Chapter 4 SVG XML {reference}: {exc}")
 
 header = require_file("_includes/site-header.html")
 if header.is_file():
@@ -125,5 +148,5 @@ if errors:
 
 print("site verification: PASS")
 print(f"historical posts: {len(posts)}")
-print("workshop chapters: 3")
-print("workshop SVGs: 5")
+print("workshop chapters: 4")
+print("workshop SVGs: 9")

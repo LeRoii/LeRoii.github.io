@@ -29,7 +29,7 @@ class VisualStyleTests(unittest.TestCase):
         for phrase in [
             "FEATURED",
             "电子创新工作室资料",
-            "电子设计基础训练自学讲义（第1-3章）",
+            "电子设计基础训练自学讲义（第1-4章）",
             "阅读讲义",
             "安全和基线测试",
             "焊接和返修",
