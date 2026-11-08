@@ -39,6 +39,11 @@ class TaskAssignmentTests(unittest.TestCase):
         self.assertRegex(layout, r"page\.section\s*==\s*'tasks'")
         self.assertIn("/tasks/", layout)
 
+    def test_task_links_to_prerequisite_concepts(self):
+        text = TASK_PAGE.read_text(encoding="utf-8")
+        self.assertIn("先阅读", text)
+        self.assertIn("/workshop/ubuntu-opencv-concepts/", text)
+
 
 if __name__ == "__main__":
     unittest.main()

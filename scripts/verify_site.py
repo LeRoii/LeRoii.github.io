@@ -24,6 +24,7 @@ required_files = [
     "workshop/index.md",
     "workshop/electronics-foundations.md",
     "workshop/common-interface-foundations.md",
+    "workshop/ubuntu-opencv-concepts.md",
     "tasks/index.md",
     "tasks/ubuntu-opencv-week1.md",
     "_layouts/default.html",
@@ -45,6 +46,7 @@ routes = {
     "workshop/index.md": "/workshop/",
     "workshop/electronics-foundations.md": "/workshop/electronics-foundations/",
     "workshop/common-interface-foundations.md": "/workshop/common-interface-foundations/",
+    "workshop/ubuntu-opencv-concepts.md": "/workshop/ubuntu-opencv-concepts/",
     "tasks/index.md": "/tasks/",
     "tasks/ubuntu-opencv-week1.md": "/tasks/ubuntu-opencv-week1/",
 }
@@ -105,6 +107,25 @@ if chapter4.is_file():
         except ET.ParseError as exc:
             errors.append(f"invalid Chapter 4 SVG XML {reference}: {exc}")
 
+concepts = require_file("workshop/ubuntu-opencv-concepts.md")
+if concepts.is_file():
+    concepts_text = concepts.read_text(encoding="utf-8")
+    for phrase in ["Ubuntu 与 OpenCV 开发基础概念", "ISO", "UEFI", "APT", "GCC", "CMake", "pkg-config", "cv::Mat", "概念与任务书对照表"]:
+        if phrase not in concepts_text:
+            errors.append(f"Ubuntu/OpenCV concepts missing content: {phrase}")
+    svg_refs = re.findall(r"\((/assets/images/electronics/figure-uoc-[^)]+\.svg)\)", concepts_text)
+    if len(svg_refs) != 3 or len(set(svg_refs)) != 3:
+        errors.append(f"expected 3 unique Ubuntu/OpenCV SVG references, got {len(set(svg_refs))}")
+    for reference in svg_refs:
+        path = ROOT / reference.lstrip("/")
+        if not path.is_file():
+            errors.append(f"missing Ubuntu/OpenCV SVG reference target: {reference}")
+            continue
+        try:
+            ET.parse(path)
+        except ET.ParseError as exc:
+            errors.append(f"invalid Ubuntu/OpenCV SVG XML {reference}: {exc}")
+
 header = require_file("_includes/site-header.html")
 if header.is_file():
     header_text = header.read_text(encoding="utf-8")
@@ -126,6 +147,8 @@ if task_page.is_file():
     for retained in ["安全红线", "备份", "目标硬盘", "SHA-256", "OpenCV 工程重建"]:
         if retained not in task_text:
             errors.append(f"task page missing required content: {retained}")
+    if "/workshop/ubuntu-opencv-concepts/" not in task_text or "先阅读" not in task_text:
+        errors.append("task page missing prerequisite concepts link")
 
 css = require_file("assets/css/style.scss")
 if css.is_file():
@@ -149,4 +172,4 @@ if errors:
 print("site verification: PASS")
 print(f"historical posts: {len(posts)}")
 print("workshop chapters: 4")
-print("workshop SVGs: 9")
+print("workshop SVGs: 12")

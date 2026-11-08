@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <defs><style>.title{font:700 32px Arial,"Noto Sans SC",sans-serif;fill:#102a43}.h{font:700 21px Arial,"Noto Sans SC",sans-serif;fill:#102a43}.t{font:17px Arial,"Noto Sans SC",sans-serif;fill:#334e68}.small{font:15px Arial,"Noto Sans SC",sans-serif;fill:#486581}.box{fill:#fff;stroke:#829ab1;stroke-width:3}.accent{fill:#e8f3ff;stroke:#1473e6;stroke-width:3}.tool{fill:#fff4e5;stroke:#f59e0b;stroke-width:3}.line{fill:none;stroke:#1473e6;stroke-width:5}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#1473e6"/></marker></defs>
+  <rect width="1200" height="680" fill="#f5f9fc"/><text x="55" y="60" class="title">C/C++ 程序不是“写完就能运行”：它要经过构建流程</text>
+  <g transform="translate(45 125)"><rect width="170" height="110" rx="16" class="box"/><text x="53" y="45" class="h">源代码</text><text x="36" y="78" class="t">.c / .cpp / .h</text></g>
+  <g transform="translate(260 125)"><rect width="170" height="110" rx="16" class="accent"/><text x="52" y="45" class="h">预处理</text><text x="31" y="78" class="small">展开 #include 等</text></g>
+  <g transform="translate(475 125)"><rect width="170" height="110" rx="16" class="accent"/><text x="63" y="45" class="h">编译</text><text x="27" y="78" class="small">检查语法并生成汇编</text></g>
+  <g transform="translate(690 125)"><rect width="170" height="110" rx="16" class="accent"/><text x="63" y="45" class="h">汇编</text><text x="30" y="78" class="small">生成目标文件 .o</text></g>
+  <g transform="translate(905 125)"><rect width="250" height="110" rx="16" class="tool"/><text x="98" y="45" class="h">链接</text><text x="28" y="78" class="small">合并目标文件与 OpenCV 库</text></g>
+  <path d="M215 180H260M430 180H475M645 180H690M860 180H905" class="line" marker-end="url(#a)"/>
+  <path d="M1030 235V300" class="line" marker-end="url(#a)"/>
+  <rect x="905" y="320" width="250" height="95" rx="16" class="box"/><text x="968" y="360" class="h">可执行文件</text><text x="958" y="391" class="small">操作系统加载并运行</text>
+  <rect x="55" y="315" width="710" height="210" rx="18" class="box"/><text x="90" y="355" class="h">工具之间的分工</text>
+  <text x="90" y="395" class="t">GCC / G++：调用预处理、编译、汇编和链接工具链。</text>
+  <text x="90" y="432" class="t">CMake：读取 CMakeLists.txt，生成并组织构建规则；它不是编译器。</text>
+  <text x="90" y="469" class="t">pkg-config：告诉工具“库的头文件和链接参数在哪里”。</text>
+  <text x="90" y="506" class="t">Git：记录源代码的版本，不参与编译。</text>
+  <rect x="55" y="565" width="1100" height="70" rx="14" class="tool"/><text x="85" y="607" class="t">`cmake -S . -B build` 是配置；`cmake --build build` 才是按规则执行构建。</text>
+</svg>
+

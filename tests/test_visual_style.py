@@ -34,6 +34,7 @@ class VisualStyleTests(unittest.TestCase):
             "安全和基线测试",
             "焊接和返修",
             "万用表和直流电源",
+            "Ubuntu 与 OpenCV 开发基础概念",
         ]:
             self.assertIn(phrase, home)
 

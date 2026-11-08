@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LECTURE = ROOT / "workshop/electronics-foundations.md"
 CHAPTER4 = ROOT / "workshop/common-interface-foundations.md"
+UBUNTU_OPENCV_CONCEPTS = ROOT / "workshop/ubuntu-opencv-concepts.md"
 
 
 class WorkshopContentTests(unittest.TestCase):
@@ -14,11 +15,14 @@ class WorkshopContentTests(unittest.TestCase):
         index = (ROOT / "workshop/index.md").read_text(encoding="utf-8")
         lecture = LECTURE.read_text(encoding="utf-8")
         chapter4 = CHAPTER4.read_text(encoding="utf-8")
+        concepts = UBUNTU_OPENCV_CONCEPTS.read_text(encoding="utf-8")
         self.assertIn("permalink: /workshop/", index)
         self.assertIn("/workshop/electronics-foundations/", index)
         self.assertIn("/workshop/common-interface-foundations/", index)
+        self.assertIn("/workshop/ubuntu-opencv-concepts/", index)
         self.assertIn("permalink: /workshop/electronics-foundations/", lecture)
         self.assertIn("permalink: /workshop/common-interface-foundations/", chapter4)
+        self.assertIn("permalink: /workshop/ubuntu-opencv-concepts/", concepts)
 
     def test_lecture_has_three_chapters_and_no_training_task_sections(self):
         text = LECTURE.read_text(encoding="utf-8")
@@ -48,6 +52,17 @@ class WorkshopContentTests(unittest.TestCase):
         self.assertNotRegex(text, r"(?m)^## .*实训任务")
         references = re.findall(r"\((/assets/images/electronics/figure-4-[^)]+\.svg)\)", text)
         self.assertEqual(len(set(references)), 4)
+        for reference in references:
+            path = ROOT / reference.lstrip("/")
+            self.assertTrue(path.is_file(), f"missing {reference}")
+            ET.parse(path)
+
+    def test_ubuntu_opencv_concepts_and_svg_assets(self):
+        text = UBUNTU_OPENCV_CONCEPTS.read_text(encoding="utf-8")
+        for phrase in ["Ubuntu 与 OpenCV 开发基础概念", "ISO", "UEFI", "APT", "GCC", "CMake", "pkg-config", "cv::Mat", "概念与任务书对照表"]:
+            self.assertIn(phrase, text)
+        references = re.findall(r"\((/assets/images/electronics/figure-uoc-[^)]+\.svg)\)", text)
+        self.assertEqual(len(set(references)), 3)
         for reference in references:
             path = ROOT / reference.lstrip("/")
             self.assertTrue(path.is_file(), f"missing {reference}")
