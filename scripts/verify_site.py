@@ -25,8 +25,10 @@ required_files = [
     "workshop/electronics-foundations.md",
     "workshop/common-interface-foundations.md",
     "workshop/ubuntu-opencv-concepts.md",
+    "workshop/python-opencv-devtools-concepts.md",
     "tasks/index.md",
     "tasks/ubuntu-opencv-week1.md",
+    "tasks/ubuntu-python-opencv-week2.md",
     "_layouts/default.html",
     "_layouts/home.html",
     "_layouts/archive.html",
@@ -47,8 +49,10 @@ routes = {
     "workshop/electronics-foundations.md": "/workshop/electronics-foundations/",
     "workshop/common-interface-foundations.md": "/workshop/common-interface-foundations/",
     "workshop/ubuntu-opencv-concepts.md": "/workshop/ubuntu-opencv-concepts/",
+    "workshop/python-opencv-devtools-concepts.md": "/workshop/python-opencv-devtools-concepts/",
     "tasks/index.md": "/tasks/",
     "tasks/ubuntu-opencv-week1.md": "/tasks/ubuntu-opencv-week1/",
+    "tasks/ubuntu-python-opencv-week2.md": "/tasks/ubuntu-python-opencv-week2/",
 }
 for filename, route in routes.items():
     path = ROOT / filename
@@ -149,6 +153,30 @@ if task_page.is_file():
             errors.append(f"task page missing required content: {retained}")
     if "/workshop/ubuntu-opencv-concepts/" not in task_text or "先阅读" not in task_text:
         errors.append("task page missing prerequisite concepts link")
+
+week2_page = require_file("tasks/ubuntu-python-opencv-week2.md")
+if week2_page.is_file():
+    week2_text = week2_page.read_text(encoding="utf-8")
+    for phrase in ["上周装好的 Ubuntu", "MobaXterm", "<details markdown=\"1\">", "conda create -n week2_cv", "/workshop/python-opencv-devtools-concepts/"]:
+        if phrase not in week2_text:
+            errors.append(f"week 2 task missing content: {phrase}")
+    if week2_text.count("<details") != week2_text.count("</details>"):
+        errors.append("week 2 reference code disclosure is not balanced")
+
+week2_concepts = require_file("workshop/python-opencv-devtools-concepts.md")
+if week2_concepts.is_file():
+    concepts_text = week2_concepts.read_text(encoding="utf-8")
+    for phrase in ["先与上周的 C/C++ 比一比", "Python 解释器", "GitHub", "SFTP", "conda 环境", "/tasks/ubuntu-python-opencv-week2/"]:
+        if phrase not in concepts_text:
+            errors.append(f"week 2 concepts missing content: {phrase}")
+
+for index_file, route in [
+    ("tasks/index.md", "/tasks/ubuntu-python-opencv-week2/"),
+    ("workshop/index.md", "/workshop/python-opencv-devtools-concepts/"),
+    ("_layouts/home.html", "/workshop/python-opencv-devtools-concepts/"),
+]:
+    if route not in (ROOT / index_file).read_text(encoding="utf-8"):
+        errors.append(f"new content missing from {index_file}: {route}")
 
 css = require_file("assets/css/style.scss")
 if css.is_file():

@@ -17,4 +17,10 @@ description: 电子创新工作室的周任务、成果清单与验收要求
     <p>在实体计算机上完成 Ubuntu 独占安装，配置 GCC、G++、CMake 和 Git，安装 OpenCV 并完成一个可从空构建目录重新编译的图像处理工程。</p>
     <a class="button-primary" href="{{ '/tasks/ubuntu-opencv-week1/' | relative_url }}">查看任务书 <span aria-hidden="true">→</span></a>
   </article>
+  <article class="task-card">
+    <div class="task-card__meta">Python 图像处理 · 1 周 · 必做</div>
+    <h2>Ubuntu 下 Python、OpenCV 与常用开发工具一周任务书</h2>
+    <p>在上周安装的 Ubuntu 中完成 Python 图像处理程序，练习 VS Code、Git、GitHub，以及从另一台电脑使用 SSH 和 SFTP。</p>
+    <a class="button-primary" href="{{ '/tasks/ubuntu-python-opencv-week2/' | relative_url }}">查看任务书 <span aria-hidden="true">→</span></a>
+  </article>
 </div>
