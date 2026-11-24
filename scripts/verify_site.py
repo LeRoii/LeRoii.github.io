@@ -26,9 +26,12 @@ required_files = [
     "workshop/common-interface-foundations.md",
     "workshop/ubuntu-opencv-concepts.md",
     "workshop/python-opencv-devtools-concepts.md",
+    "workshop/wokwi-gpio-interrupt-pwm-concepts.md",
+    "workshop/wokwi-browser-demo.md",
     "tasks/index.md",
     "tasks/ubuntu-opencv-week1.md",
     "tasks/ubuntu-python-opencv-week2.md",
+    "tasks/wokwi-gpio-interrupt-pwm-week3.md",
     "_layouts/default.html",
     "_layouts/home.html",
     "_layouts/archive.html",
@@ -50,9 +53,12 @@ routes = {
     "workshop/common-interface-foundations.md": "/workshop/common-interface-foundations/",
     "workshop/ubuntu-opencv-concepts.md": "/workshop/ubuntu-opencv-concepts/",
     "workshop/python-opencv-devtools-concepts.md": "/workshop/python-opencv-devtools-concepts/",
+    "workshop/wokwi-gpio-interrupt-pwm-concepts.md": "/workshop/wokwi-gpio-interrupt-pwm-concepts/",
+    "workshop/wokwi-browser-demo.md": "/workshop/wokwi-browser-demo/",
     "tasks/index.md": "/tasks/",
     "tasks/ubuntu-opencv-week1.md": "/tasks/ubuntu-opencv-week1/",
     "tasks/ubuntu-python-opencv-week2.md": "/tasks/ubuntu-python-opencv-week2/",
+    "tasks/wokwi-gpio-interrupt-pwm-week3.md": "/tasks/wokwi-gpio-interrupt-pwm-week3/",
 }
 for filename, route in routes.items():
     path = ROOT / filename
@@ -170,10 +176,24 @@ if week2_concepts.is_file():
         if phrase not in concepts_text:
             errors.append(f"week 2 concepts missing content: {phrase}")
 
+for page in [
+    "tasks/wokwi-gpio-interrupt-pwm-week3.md",
+    "workshop/wokwi-gpio-interrupt-pwm-concepts.md",
+    "workshop/wokwi-browser-demo.md",
+]:
+    path = require_file(page)
+    if not path.is_file():
+        continue
+    for reference in re.findall(r"(?:!?)\[[^]]*\]\((/assets/images/wokwi/[^)]+)\)", path.read_text(encoding="utf-8")):
+        require_file(reference.lstrip("/"))
+
 for index_file, route in [
     ("tasks/index.md", "/tasks/ubuntu-python-opencv-week2/"),
     ("workshop/index.md", "/workshop/python-opencv-devtools-concepts/"),
     ("_layouts/home.html", "/workshop/python-opencv-devtools-concepts/"),
+    ("tasks/index.md", "/tasks/wokwi-gpio-interrupt-pwm-week3/"),
+    ("workshop/index.md", "/workshop/wokwi-gpio-interrupt-pwm-concepts/"),
+    ("_layouts/home.html", "/workshop/wokwi-gpio-interrupt-pwm-concepts/"),
 ]:
     if route not in (ROOT / index_file).read_text(encoding="utf-8"):
         errors.append(f"new content missing from {index_file}: {route}")
