@@ -10,7 +10,7 @@ description: 用 Arduino Uno 仿真练习 GPIO、外部中断、millis 定时与
 
 > 适用对象：已完成 Ubuntu、C/C++ 基础和上一周 Python 开发工具训练的学生  
 > 周期：1 周；建议周内 5 个晚上，每晚约 1.5～2 小时  
-> 操作平台：实验室 Ubuntu 电脑的浏览器、Wokwi 在线仿真  
+> 操作平台：浏览器、Wokwi 在线仿真<br>
 > 统一板卡：**Arduino Uno（ATmega328P）**；程序使用 Arduino 风格 C/C++  
 > 验收方式：学生现场按检查表独立操作、记录结果；教师每周集中交流时处理共性问题
 
